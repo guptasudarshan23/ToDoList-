@@ -168,6 +168,9 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
-});
+const PORT = process.env.PORT || 3000; // 3000 is the fallback port
+
+
+app.listen(PORT, () => {
+  console.log("Server started on port " + PORT)
+})
